@@ -1,21 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Person } from 'react-bootstrap-icons';
 
-const Navbar = ({ isLoggedIn, userType }) => {
+const NavBar = ({ isLoggedIn }) => {
   return (
     <nav>
       <div className="logo">CYDI</div>
       {isLoggedIn ? (
-        <Person size={24} />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-person" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+        </svg>
       ) : (
         <div className="user-buttons">
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+          </svg>
         </div>
       )}
     </nav>
   );
 };
 
-export default Navbar;
+export default NavBar;
+
+
