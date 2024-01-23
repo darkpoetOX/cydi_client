@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeContainer = () => {
   return (
@@ -7,11 +8,15 @@ const HomeContainer = () => {
       <div className="button-container">
         <div className="role-container">
           <h2>I'm a Candidate</h2>
-          <button className="big-button">Discover and Apply for Jobs</button>
+          <Link to="/candidate-registration">
+            <button className="big-button">Discover and Apply for Jobs</button>
+          </Link>
         </div>
         <div className="role-container">
           <h2>I'm an Employer</h2>
-          <button className="big-button">Post Jobs and View Applicants</button>
+          <Link to="/employer-registration">
+            <button className="big-button">Post Jobs and View Applicants</button>
+          </Link>
         </div>
       </div>
     </div>
@@ -19,5 +24,3 @@ const HomeContainer = () => {
 };
 
 export default HomeContainer;
-
-

@@ -1,24 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeContainer from './containers/HomeContainer';
+import CandidateContainer from './containers/CandidateContainer';
+import EmployerContainer from './containers/EmployerContainer';
 import Footer from './components/Footer';
-import './App.css';
 import NavBar from './components/NavBar';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <Router>
+        <NavBar />
         <Routes>
           <Route path="/" element={<HomeContainer />} />
-          {/* other routes here as needed */}
+          <Route path="/candidate" element={<CandidateContainer />} />
+          <Route path="/employer" element={<EmployerContainer />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
 
 export default App;
+
 
