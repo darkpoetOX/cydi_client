@@ -5,7 +5,7 @@ const CandidateContainer = () => {
   return (
     <div>
       <h1>Candidate Container</h1>
-      <CandidateRegistration />
+      <p>I am the candidate Container!</p>
     </div>
   );
 };
