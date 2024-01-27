@@ -26,7 +26,17 @@ const EmployerRegistration = () => {
         <label htmlFor="companyName">Company Name:</label>
         <input type="text" id="companyName" name="companyName" value={formData.companyName} onChange={handleChange} />
 
-        {/* ... other form fields ... */}
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} />
+
+        <label htmlFor="address">Address:</label>
+        <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} />
+
+        <label htmlFor="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
 
         <button type="submit">Submit</button>
       </form>

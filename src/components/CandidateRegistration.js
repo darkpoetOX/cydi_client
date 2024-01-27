@@ -23,7 +23,21 @@ const CandidateRegistration = () => {
     <div>
       <h2>Candidate Registration Page</h2>
       <form onSubmit={handleSubmit}>
-        {/* ... your form fields ... */}
+        <label htmlFor="name">Name:</label>
+        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} />
+
+        <label htmlFor="address">Address:</label>
+        <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} />
+
+        <label htmlFor="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
+
         <button type="submit">Submit</button>
       </form>
     </div>
