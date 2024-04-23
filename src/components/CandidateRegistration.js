@@ -18,7 +18,7 @@ const CandidateRegistration = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/candidates', {
+      const response = await fetch('http://localhost:8080/candidates/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
