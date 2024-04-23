@@ -59,8 +59,6 @@ const CandidateRegistration = () => {
         <label htmlFor="address">Address:</label>
         <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} />
 
-        <label htmlFor="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
 
         <button type="submit">Submit</button>
       </form>
