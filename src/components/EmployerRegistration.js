@@ -6,7 +6,6 @@ const EmployerRegistration = () => {
     email: '',
     password: '',
     address: '',
-    phoneNumber: '',
   });
 
   const handleChange = (e) => {
@@ -17,7 +16,7 @@ const EmployerRegistration = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/employers', {
+      const response = await fetch('http://localhost:8080/employers/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

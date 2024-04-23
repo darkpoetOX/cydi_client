@@ -7,7 +7,6 @@ const CandidateRegistration = () => {
     email: '',
     password: '',
     address: '',
-    phoneNumber: '',
   });
 
   const handleChange = (e) => {
