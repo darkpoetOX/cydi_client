@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 const CandidateRegistration = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
     address: '',
