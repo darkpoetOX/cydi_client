@@ -16,8 +16,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomeContainer />} />
-          <Route path="/candidate" element={<CandidateContainer />} />
-          <Route path="/employer" element={<EmployerContainer />} />
+          {/* <Route path="/candidate" element={<CandidateContainer />} />
+          <Route path="/employer" element={<EmployerContainer />} /> */}
           <Route path="/candidate-registration" element={<CandidateRegistration />} />
           <Route path="/employer-registration" element={<EmployerRegistration />} />
         </Routes>
