@@ -1,3 +1,4 @@
+/* App.css */
 body {
   margin: 0;
   padding: 0;
@@ -22,6 +23,28 @@ nav {
   padding: 1rem;
   background-color: #333;
   color: white;
+}
+
+.profile-picture {
+  display: flex;
+  align-items: center; /* Horizontally align items */
+}
+
+.profile-picture svg {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-fields label {
+  margin-bottom: 5px;
+}
+
+.input-fields input {
+  margin-bottom: 10px;
 }
 
 .user-buttons {
