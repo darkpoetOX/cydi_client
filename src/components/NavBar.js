@@ -20,7 +20,7 @@ const NavBar = () => {
       <div className="logo">CYDI</div>
       {isLoggedIn ? (
         <div className="user-info">
-          <div>{user.name}</div>
+          <p>Welcome, {user.firstName}!</p>
           <button onClick={handleLogOut}>Log Out</button>
         </div>
       ) : (
