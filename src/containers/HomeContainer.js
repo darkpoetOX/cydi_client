@@ -5,6 +5,7 @@ const HomeContainer = () => {
   return (
     <div className="home-container">
       <h1>Welcome to Can You Do It?</h1>
+      <h2>Register</h2>
       <div className="button-container">
         <div className="role-container">
           <h2>I'm a Candidate</h2>

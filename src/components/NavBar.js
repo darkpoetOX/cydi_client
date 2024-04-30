@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
-import LogIn from './LogIn';
+import CandidateLogIn from './CandidateLogIn';
+import EmployerLogIn from './EmployerLogIn';
 
 const NavBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState(null);
+  const [candidate, setCandidate] = useState(null);
+  const [employer, setEmployer] = useState(null);
 
-  const handleLogIn = (candidate) => {
+  const handleCandidateLogIn = (candidate) => {
     setIsLoggedIn(true);
-    setUser(candidate);
+    setCandidate(candidate);
+  };
+
+  const handleEmployerLogIn = (employer) => {
+    setIsLoggedIn(true);
+    setEmployer(employer);
   };
 
   const handleLogOut = () => {
     setIsLoggedIn(false);
-    setUser(null);
+    setCandidate(null);
+    setEmployer(null);
   };
 
   return (
@@ -20,17 +28,18 @@ const NavBar = () => {
       <div className="logo">CYDI</div>
       {isLoggedIn ? (
         <div className="user-info">
-          <p>Welcome, {user.firstName}!</p>
+          {candidate && <p>Welcome, {candidate.firstName}!</p>}
+          {employer && <p>Welcome, {employer.companyName}!</p>}
           <button onClick={handleLogOut}>Log Out</button>
         </div>
       ) : (
-        <LogIn onLogIn={handleLogIn} />
+        <>
+          <CandidateLogIn onLogIn={handleCandidateLogIn} />
+          <EmployerLogIn onLogIn={handleEmployerLogIn} />
+        </>
       )}
     </nav>
   );
 };
 
 export default NavBar;
-
-
-

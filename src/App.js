@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeContainer from './containers/HomeContainer';
-import CandidateContainer from './containers/CandidateContainer';
-import EmployerContainer from './containers/EmployerContainer';
 import CandidateRegistration from './components/CandidateRegistration';
 import EmployerRegistration from './components/EmployerRegistration';
 import Footer from './components/Footer';
@@ -16,8 +14,6 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomeContainer />} />
-          {/* <Route path="/candidate" element={<CandidateContainer />} />
-          <Route path="/employer" element={<EmployerContainer />} /> */}
           <Route path="/candidate-registration" element={<CandidateRegistration />} />
           <Route path="/employer-registration" element={<EmployerRegistration />} />
         </Routes>
